@@ -12,10 +12,11 @@ Radial basis function (RBF) network has been utilized in many applications due t
 ## Usage
 
 - `DBAKRBF/* ` the source code of DBAK-RBF network and components analysis in the paper. It is based on [RBF Network MATLAB Code](http://mccormickml.com/2013/08/16/rbf-network-matlab-code/). the explanation is as follows
-  - `DBAKRBF/costFunctionRBFN.m` the kernel function of DBAK-RBF network
+  - `DBAKRBF/costFunctionRBFN.m` compute cost and gradients for DBAK-RBF network
   - `DBAKRBF/exp_trainRBFN.m` the training process of DBAK-RBF network
-  - `DBAKRBF/RBF_calcDtw.m` RBF network using DTW based kernel
+  - `DBAKRBF/RBF_calcDtw.m` calculate DTW distance between two points
   - `DBAKRBF/RBF_calcAGDTWKernel.m` same as `RBF_calcDtw` but use altered Gaussian DTW (AGDTW) instead of DTW
+   - `DBAKRBF/testRBFN.m` Computes output of DBAK-RBF Network for the provided input
 - `fmin_adam/fmin_adam.m` Function Adam optimiser, with matlab calling format. Adam is an implementation of the Adam optimisation algorithm (gradient descent with Adaptive learning rates individually on each parameter, with momentum) from [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980) and is designed to work on stochastic gradient descent problems. We use it to train our model.
 - `kMeans/*` kmeans clustering use to calucate the center of RBF network, also from [RBF Network MATLAB Code](http://mccormickml.com/2013/08/16/rbf-network-matlab-code/)
 - `DBA.m` DBA is an averaging method that is consistent with Dynamic Time Warping. In our work, this technique
